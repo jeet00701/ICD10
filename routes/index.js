@@ -95,7 +95,7 @@ router.get('/getTableDescriptionWithCode', function(req,res,next){
     var db = new sqlite3.Database(dbFile);
     var code = req.query["code"]
 
-    var data =  db.all("select shortDesc, longDesc from tableDescription where code=?",[code],function (err,rows) {
+    var data =  db.all("select * from tableDescription where code=?",[code],function (err,rows) {
         if(err){
             console.log(err);
             res.send(err);
