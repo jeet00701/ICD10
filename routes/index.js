@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var sqlite3 = require('sqlite3').verbose();
 var fs = require('fs');
-var dbFile = './ICD10.db';
+var dbFile = './ICD10.sqlite';
 
 // Setup database:
 
